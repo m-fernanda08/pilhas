@@ -1,38 +1,38 @@
-# pilhas
-Pilhas em C
+# Pilhas em C
+
 Este repositório contém uma implementação básica de uma estrutura de dados Pilha em C. Pilhas são estruturas LIFO (Last In, First Out), onde o último elemento inserido é o primeiro a ser removido.
 
-Estrutura da Pilha
-c
-Copiar código
-#define MAX 100
+# Estrutura da Pilha
+```
+#define MAX 100 
 
 struct Stack {
-    int arr[MAX];
-    int top;
+  int arr[MAX];
+  int top;
 };
+```
 
-Operações Básicas
-Push: Adiciona um elemento ao topo da pilha.
-Pop: Remove e retorna o elemento do topo da pilha.
-Peek: Retorna o elemento do topo sem removê-lo.
+# Operações Básicas
+Push: Adiciona um elemento ao topo da pilha.  
+Pop: Remove e retorna o elemento do topo da pilha.  
+Peek: Retorna o elemento do topo sem removê-lo.  
 isEmpty: Verifica se a pilha está vazia.
 
-Exemplo de Uso:
-c
-Copiar código
 
+## Exemplo de uso 
+
+```
 #include <stdio.h>
 #define MAX 100
 
 struct Stack {
-    int arr[MAX];
-    int top;
+  int arr [MAX];
+  int top;
 };
 
-void push(struct Stack *stack, int value) {
-    if (stack->top == MAX - 1) return;
-    stack->arr[++(stack->top)] = value;
+void push(struct Stack *stack, int value){
+ if (stack->top == MAX - 1) return;
+ stack->arr[++(stack->top)] = value;
 }
 
 int pop(struct Stack *stack) {
@@ -60,3 +60,9 @@ int main() {
 
     return 0;
 }
+```
+## Compilação
+Compile o código com:
+```bash
+gcc -o pilha pilha.c
+```
